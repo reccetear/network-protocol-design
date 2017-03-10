@@ -1,0 +1,110 @@
+POST / HTTP/1.1
+Host: ocsp.digicert.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Length: 83
+Content-Type: application/ocsp-request
+Connection: keep-alive
+
+0Q0O0M0K0I0	..+............(.	A...B..G@B.X....>.i...G...&....cd+....y.D.... .a_.k..HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: public, max-age=172800
+Content-Type: application/ocsp-response
+Date: Tue, 07 Mar 2017 11:34:36 GMT
+Etag: "58be5c26-1d7"
+Expires: Mon, 13 Mar 2017 23:34:36 GMT
+Last-Modified: Tue, 07 Mar 2017 07:07:18 GMT
+Server: ECS (hhp/B0D0)
+X-Cache: HIT
+Content-Length: 471
+
+0...
+......0....	+.....0......0...0.......>.i...G...&....cd+...20170306220000Z0s0q0I0	..+............(.	A...B..G@B.X....>.i...G...&....cd+....y.D.... .a_.k......20170306220000Z....20170313220000Z0.	*.H..................]..M$..X.wx.u.t..Y..
+$+...".W../H..r....T_F.>.k}....I..".3../a...w.3}]...R..[s..#..Iz....].W.R.^.1.t....UH.F...iSocT....}/..*..>l..m...{.y..e..)HK.!B....Du...!t.......Bv..".aq.J.\9.R..ZB.A
+	.\...:.Ke...8bW......W.h..N...'F}..!.FD$....0A`.W...$.9..%.POST / HTTP/1.1
+Host: ocsp.digicert.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Length: 83
+Content-Type: application/ocsp-request
+Connection: keep-alive
+
+0Q0O0M0K0I0	..+........I.....v....@-h;qj.....=.P......J`
+e.!.......(....B.5.....e.HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: public, max-age=172800
+Content-Type: application/ocsp-response
+Date: Tue, 07 Mar 2017 11:34:36 GMT
+Etag: "58be6a6b-1d7"
+Expires: Mon, 13 Mar 2017 23:34:36 GMT
+Last-Modified: Tue, 07 Mar 2017 08:08:11 GMT
+Server: ECS (hhp/9AC1)
+X-Cache: HIT
+Content-Length: 471
+
+0...
+......0....	+.....0......0...0......=.P......J`
+e.!.......20170307073400Z0s0q0I0	..+........I.....v....@-h;qj.....=.P......J`
+e.!.......(....B.5.....e.....20170307073400Z....20170314064900Z0.	*.H............G2yE.O...Z..r=.o..2.7.H\...q.....,...bZ....T..4,zJ<.j,....|N.....K1J+...2.;...V.mR.p..r..!..........[w^...{..m..n.........	j...}..y....(.......\C.>.F^....s..z(.1.....6^...2.....(Q.."0`w. .o.7O.<;..!...-....*Tl2.............^$....jn....r..2=9{t3.x.Q.])=....POST / HTTP/1.1
+Host: ocsp.digicert.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Length: 83
+Content-Type: application/ocsp-request
+Connection: keep-alive
+
+0Q0O0M0K0I0	..+............(.	A...B..G@B.X....>.i...G...&....cd+....y.D.... .a_.k..HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: public, max-age=172800
+Content-Type: application/ocsp-response
+Date: Tue, 07 Mar 2017 11:34:36 GMT
+Etag: "58be5c26-1d7"
+Expires: Mon, 13 Mar 2017 23:34:36 GMT
+Last-Modified: Tue, 07 Mar 2017 07:07:18 GMT
+Server: ECS (hhp/B0D0)
+X-Cache: HIT
+Content-Length: 471
+
+0...
+......0....	+.....0......0...0.......>.i...G...&....cd+...20170306220000Z0s0q0I0	..+............(.	A...B..G@B.X....>.i...G...&....cd+....y.D.... .a_.k......20170306220000Z....20170313220000Z0
+.	*.H..
+................]..M$..X.wx.u.t..Y..
+$+...".W../H..r....T_F.>.k}....I..".3../a...w.3}]...R..[s..#..Iz....].W.R.^.1.t....UH.F...iSocT....}/..*..>l..m...{.y..e..)HK.!B....Du...!t.......Bv..".aq.J.\9.R..ZB.A
+	.\...:.Ke...8bW......W.h..N...'F}..!.FD$....0A`.W...$
+.9..%.POST / HTTP/1.1
+Host: ocsp.digicert.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Length: 83
+Content-Type: application/ocsp-request
+Connection: keep-alive
+
+0Q0O0M0K0I0	..+........I.....v....@-h;qj.....=.P......J`
+e.!.......
+(....B.5.....e.HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: public, max-age=172800
+Content-Type: application/ocsp-response
+Date: Tue, 07 Mar 2017 11:34:36 GMT
+Etag: "58be6a6b-1d7"
+Expires: Mon, 13 Mar 2017 23:34:36 GMT
+Last-Modified: Tue, 07 Mar 2017 08:08:11 GMT
+Server: ECS (hhp/9AC1)
+X-Cache: HIT
+Content-Length: 471
+
+0...
+......0....	+.....0......0...0......=.P......J`
+e.!.......20170307073400Z0s0q0I0	..+........I.....v....@-h;qj.....=.P......J`
+e.!.......
+(....B.5.....e.....20170307073400Z....20170314064900Z0
+.	*.H..
+..........G2yE.O...Z..r=.o..2.7.H\...q.....,...bZ....T..4,zJ<.j,....|N.....K1J+...2.;...V.mR.p..r..!..........[w^...{..m..n.........	j...}..y....(.......\C.>.F^....s..z(.1.....6^...2.....(Q.."0`w. .o.7O.<;..!...-....*Tl2.............^$....jn....r..2=9{t3.x.Q.])=....

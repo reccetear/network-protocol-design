@@ -1,0 +1,28 @@
+send:
+input : nanjing(23bytes)
+01 01 n a n j i n g 00 .....05
+receive:
+(77bytes)
+01 00 n a n j i n g 00 .....00
+
+send:
+input :1(23bytes)
+02 01 b e i j i n g 00 .....01
+receive:
+(77bytes)
+03 41 b e i j i n g 00..(13bytes)\\22bytes
+07 e1 03 0a\\26bytes
+(01)\\27bytes
+(00 04)
+00 .....00
+
+
+
+
+00 04
+(weather:shower temp:04)
+04 0c
+(weather:fog temp:12)
+input :2
+
+
