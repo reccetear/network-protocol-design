@@ -12,7 +12,7 @@ enum {FIRST_MENU,SECOND_MENU,QUIT};
 
 char send_buffer[send_bytes];
 char recv_buffer[recv_bytes];
-int init_socket(char *addr);
+int init_socket(char *ip_addr);
 void print_main_menu();
 void make_send_city_packet(char *city);
 void clear_screen();
@@ -40,6 +40,7 @@ int main(){
 		char city[50];
 		memset(city,0,50);
 		scanf("%s",city);
+		getchar();
 		if(!strcmp(city,"#")){
 			state = QUIT;
 			continue;
@@ -49,10 +50,10 @@ int main(){
 			continue;
 		}
 		int sockfd = init_socket("114.212.191.33");
-        if(sockfd == -1){
-        	printf("Can't create socket!\n");
-        	return -1;
-        }
+        	if(sockfd == -1){
+        		printf("Can't create socket!\n");
+        		return -1;
+        	}
 		make_send_city_packet(city);
 		send(sockfd,send_buffer,send_bytes,0);
 		recv(sockfd,recv_buffer,recv_bytes,0);
@@ -60,23 +61,27 @@ int main(){
 			printf("send city failed!\n");
 			return -1;
 		}
+		if((recv_buffer[0] == 2) && (recv_buffer[1] == 0)){
+			printf("Sorry,Server does not have weather information for city %s!\n",city);
+			continue;
+		}
 		clear_screen();
 		print_day_menu();
 		state = SECOND_MENU;
 		while(state == SECOND_MENU){
 			char day = getchar();
+			if(day == '\n'){
+				continue;
+			}
 			if(day == 'r'){
-				getchar();
 				state = FIRST_MENU;
 				continue;
 			}
 			if(day == '#'){
-				getchar();
 				state = QUIT;
 				continue;
 			}
 			if(day == 'c'){
-				getchar();
 				clear_screen();
 				print_day_menu();
 				continue;
@@ -92,7 +97,7 @@ int main(){
 						}
 						struct recv_weather recv;
 						memcpy((char *)&recv,recv_buffer,recv_bytes);
-						printf("City: %s  Today is: 2017/03/10  Weather information is as follows:\n",recv.city);
+						printf("City: %s  Today is: 2017/%02d/%02d  Weather information is as follows:\n",recv.city,recv.date[2],recv.date[3]);
 						switch(recv.inform[0].weather){
 							case 0:printf("Today's Weather is: shower;  Temp:%d\n",recv.inform[0].temp);break;
 							case 1:printf("Today's Weather is: clear;  Temp:%d\n",recv.inform[0].temp);break;
@@ -112,7 +117,7 @@ int main(){
 						}
 						struct recv_weather recv;
 						memcpy((char *)&recv,recv_buffer,recv_bytes);
-						printf("City: %s  Today is: 2017/03/10  Weather information is as follows:\n",recv.city);
+						printf("City: %s  Today is: 2017/%02d/%02d  Weather information is as follows:\n",recv.city,recv.date[2],recv.date[3]);
 						for(int i = 0; i < 3; i++){
 							switch(recv.inform[i].weather){
 								case 0:printf("The %dth day's Weather is: shower;  Temp:%d\n",i+1,recv.inform[i].temp);break;
@@ -125,12 +130,20 @@ int main(){
 						}
 				}break;
 				case '3':{
-						printf("Please enter the day number(below 10,e.g. 1 means today):");
 						int n_day = 0;
-						scanf("%d",&n_day);
-						if(n_day < 1 || n_day > 9){
-							printf("error\n");
-							break;
+						while(1){
+							printf("Please enter the day number(below 10,e.g. 1 means today):");
+							scanf("%d",&n_day);
+							getchar();
+							if(n_day < 1 || n_day > 9){
+								printf("input error\n");
+								continue;
+							}
+							else	break;
+						}
+						if(n_day == 9){
+							printf("Sorry, no given day's weather information for city %s\n",city);
+							continue;
 						}
 						make_send_days_packet(city,1,n_day);
 						send(sockfd,send_buffer,send_bytes,0);
@@ -141,7 +154,7 @@ int main(){
 						}
 						struct recv_weather recv;
 						memcpy((char *)&recv,recv_buffer,recv_bytes);
-						printf("City: %s  Today is: 2017/03/10  Weather information is as follows:\n",recv.city);
+						printf("City: %s  Today is: 2017/%02d/%02d  Weather information is as follows:\n",recv.city,recv.date[2],recv.date[3]);
 						switch(recv.inform[0].weather){
 							case 0:printf("The %dth day's Weather is: shower;  Temp:%d\n",n_day,recv.inform[0].temp);break;
 							case 1:printf("The %dth day's Weather is: clear;  Temp:%d\n",n_day,recv.inform[0].temp);break;
@@ -151,7 +164,7 @@ int main(){
 							default:printf("Don't have this weather!\n");
 						}
 				}break;
-				default:break;
+				default:printf("input error!\n");
 			}
 		}
 		clear_screen();
